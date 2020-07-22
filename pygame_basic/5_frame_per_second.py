@@ -34,11 +34,6 @@ character_speed = 0.3
 # 이벤트 루프
 running = True # 게임이 진행중인가?
 
-# 키 반복(key repeat)
-delay = 1
-interval = 1
-pygame.key.set_repeat(delay, interval)
-
 while running:
     dt = clock.tick(10) # 게임화면의 초당 프레임 수를 설정
 
@@ -62,20 +57,20 @@ while running:
             elif event.key == pygame.K_UP or event.key == pygame.K_DOWN:
                 to_y = 0
 
-        character_x_pos += to_x * dt
-        character_y_pos += to_y * dt
+    character_x_pos += to_x * dt
+    character_y_pos += to_y * dt
 
-        # 가로 경계값 처리
-        if character_x_pos < 0:
-            character_x_pos = 0
-        elif character_x_pos > screen_width - character_width:
-            character_x_pos = screen_width - character_width
+    # 가로 경계값 처리
+    if character_x_pos < 0:
+        character_x_pos = 0
+    elif character_x_pos > screen_width - character_width:
+        character_x_pos = screen_width - character_width
         
-        # 세로 경계값 처리
-        if character_y_pos < 0:
-            character_y_pos = 0
-        elif character_y_pos > screen_height - character_height:
-            character_y_pos = screen_height - character_height
+    # 세로 경계값 처리
+    if character_y_pos < 0:
+        character_y_pos = 0
+    elif character_y_pos > screen_height - character_height:
+        character_y_pos = screen_height - character_height
 
     screen.blit(background, (0, 0)) # 배경 그리기
 
