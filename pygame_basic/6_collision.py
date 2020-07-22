@@ -34,8 +34,8 @@ character_speed = 0.3
 # 적 enemy 캐릭터
 enemy = pygame.image.load("C:/Users/한상진/Desktop/PythonWorkspace/Nado_Game/pygame_basic/enemy.png")
 enemy_size = enemy.get_rect().size # 이미지의 크기를 구해옴
-enemy_width = enemy_size[0] # 캐릭터의 가로 크기
-enemy_height = enemy_size[1] # 캐릭터의 세로 크기
+enemy_width = enemy_size[0] # 적의 가로 크기
+enemy_height = enemy_size[1] # 적의 세로 크기
 enemy_x_pos = (screen_width / 2) - (enemy_width / 2) # 화면 가로의 절반 크기에 해당하는 곳에 위치 (가로)
 enemy_y_pos = (screen_height / 2) - (enemy_height / 2) # 화면 세로의 절반 크기에 해당하는 곳에 위치 (세로)
 
